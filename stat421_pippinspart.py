@@ -50,3 +50,10 @@ print(f"Mean Absolute Error: ${mae:,.2f}")
 print(f"RMSE: ${rmse:,.2f}")
 
 
+plt.figure(figsize=(6, 6))
+plt.scatter(y_val, y_pred_xg, alpha=0.5, color='purple')
+plt.plot([y_val.min(), y_val.max()], [y_val.min(), y_val.max()], 'r--', lw=2)
+plt.xlabel("Actual Values")
+plt.ylabel("XGBoost Predicted Values")
+plt.title(f"Model Performance: XGBoost")
+plt.show()
